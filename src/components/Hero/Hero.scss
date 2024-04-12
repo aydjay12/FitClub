@@ -1,0 +1,305 @@
+@import "../../App.scss";
+
+.Hero {
+  width: 100vw;
+  height: 100vh;
+  padding: 10px 40px 10px 40px;
+  position: relative;
+  @include mobile {
+    padding: 10px 20px 10px 20px;
+    height: 170vh;
+  }
+
+  .orange-background {
+    width: 25%;
+    height: 95vh;
+    background: var(--orange);
+    position: absolute;
+    right: 0;
+    top: 0;
+    @include mobile {
+      display: none;
+    }
+  }
+}
+
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7%;
+
+  .menu {
+    display: none;
+
+    @include mobile {
+      display: flex;
+      width: 20%;
+      cursor: pointer;
+      img {
+        width: 70%;
+      }
+    }
+  }
+
+  .logo {
+    width: 25%;
+    img {
+      width: 55%;
+      @include mobile {
+        width: 100%;
+      }
+    }
+    @include mobile {
+      width: 50%;
+    }
+  }
+
+  .pages {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .join {
+    z-index: 1;
+    button {
+      background: white;
+      color: black;
+      font-weight: bold;
+      border-radius: 0;
+      border: none;
+    }
+    @include mobile {
+      display: none;
+    }
+  }
+}
+
+.home {
+  display: flex;
+  height: 90%;
+  @include mobile {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.leftSide {
+  width: 70%;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  @include mobile {
+    width: 100%;
+    align-items: center;
+    margin-bottom: 4em;
+  }
+
+  .switch {
+    background: var(--appColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36%;
+    height: 3.5em;
+    border-radius: 50em;
+    font-size: 17px;
+    position: relative;
+    @include mobile {
+      font-size: 15px;
+      width: 80%;
+    }
+
+    p {
+      z-index: 1;
+    }
+
+    .bar {
+      position: absolute;
+      background: var(--orange);
+      width: 26%;
+      height: 80%;
+      border-radius: 50em;
+      display: flex;
+    }
+  }
+
+  .text {
+    height: 45%;
+    width: 70%;
+    @include mobile {
+      width: 100%;
+      margin-top: 1em;
+    }
+    h1 {
+      width: 80%;
+      line-height: 1.5em;
+      letter-spacing: 2px;
+      font-size: 70px;
+      @include mobile {
+        width: 100%;
+        text-align: center;
+        font-size: 40px;
+      }
+      span {
+        color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: white;
+      }
+    }
+    p {
+      font-size: 90%;
+      letter-spacing: 0.08em;
+      width: 90%;
+      @include mobile {
+        width: 100%;
+        text-align: center;
+        margin-top: 0.7em;
+      }
+    }
+  }
+
+  .counters {
+    display: flex;
+    width: 55%;
+    justify-content: space-between;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    @include mobile {
+      width: 100%;
+      align-self: center;
+      text-align: center;
+    }
+    h3 {
+      font-size: 35px;
+      font-weight: 500;
+    }
+    p {
+      color: var(--gray);
+    }
+  }
+
+  .buttons {
+    display: flex;
+    width: 35%;
+    justify-content: space-between;
+    @include mobile {
+      width: 85%;
+    }
+    button {
+      height: 3em;
+      width: 100%;
+      border-radius: 0;
+      border: none;
+    }
+    button:nth-child(1) {
+      background: var(--orange);
+      margin-right: 1em;
+    }
+    button:nth-child(2) {
+      background: transparent;
+      border: 2px solid var(--orange);
+    }
+  }
+}
+
+.rightSide {
+  z-index: 2;
+  width: 30%;
+  display: flex;
+  position: relative;
+  @include mobile {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-image-back {
+    position: absolute;
+    top: -1.5em;
+    left: -5.5em;
+    width: 56%;
+    @include mobile {
+      width: 70%;
+      bottom: 0;
+      left: 0.5em;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .hero-image {
+    position: absolute;
+    top: 4em;
+    left: -1.7em;
+    width: 87%;
+    @include mobile {
+      width: 100%;
+      left: 6.5em;
+      top: 3em;
+    }
+    img {
+      width: 100%;
+      @include mobile {
+        width: 70%;
+      }
+    }
+  }
+  .heart {
+    background: var(--darkGrey);
+    position: absolute;
+    right: 1.5em;
+    top: 1.5em;
+    width: 30%;
+    height: 8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    @include mobile {
+      top: 0;
+      right: 0;
+      height: 6em;
+    }
+    img {
+      width: 30%;
+    }
+  }
+  .calories {
+    background: var(--caloryCard);
+    position: absolute;
+    bottom: 5em;
+    left: -10em;
+    width: 40%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    @include mobile {
+      width: 45%;
+      height: 12vh;
+      font-size: 14px;
+      padding: 8px;
+      left: 0;
+      top: 25em;
+    }
+    img {
+      width: 25%;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+    }
+  }
+}

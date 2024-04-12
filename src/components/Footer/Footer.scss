@@ -1,0 +1,49 @@
+@import "../../App.scss";
+
+.Footer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 50vh;
+  @include mobile {
+    margin-top: 5em;
+    height: 60vh;
+  }
+
+  .divider {
+    width: 100%;
+    background: white;
+    height: 0.3vh;
+    @include mobile {
+      height: 0.15vh;
+    }
+  }
+
+  .socialMedia {
+    display: flex;
+    justify-content: space-around;
+    width: 25%;
+    margin-top: 2em;
+    @include mobile {
+      width: 70%;
+    }
+    img {
+      width: 10%;
+      @include mobile {
+        width: 15%;
+      }
+    }
+  }
+  .logo {
+    width: 15%;
+    @include mobile {
+      width: 45%;
+      margin-bottom: 5em;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
