@@ -7,7 +7,7 @@
   position: relative;
   @include mobile {
     padding: 10px 20px 10px 20px;
-    height: 170vh;
+    height: 150vh;
   }
 
   .orange-background {
@@ -118,8 +118,10 @@
     font-size: 17px;
     position: relative;
     @include mobile {
+      padding: 5px;
       font-size: 15px;
-      width: 80%;
+      width: 85%;
+      text-align: center;
     }
 
     p {

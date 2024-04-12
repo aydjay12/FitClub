@@ -9,10 +9,10 @@
   margin-top: 5em;
   margin-bottom: 3em;
   @include mobile {
-    margin-top: 2em;
+    margin-top: 3em;
     flex-direction: column;
     padding: 10px 20px 10px 20px;
-    height: 120vh;
+    height: 100vh;
   }
 
   .left {

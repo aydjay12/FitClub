@@ -9,7 +9,8 @@
   margin-bottom: 3em;
   @include mobile {
     padding: 10px 20px 10px 20px;
-    height: 220vh;
+    height: 205vh;
+    margin-bottom: 5em;
   }
 
   h2 {
@@ -20,7 +21,7 @@
     -webkit-text-stroke-color: white;
     margin-bottom: 1em;
     @include mobile {
-      font-size: 35px;
+      font-size: 33px;
       line-height: 2em;
     }
     span {
