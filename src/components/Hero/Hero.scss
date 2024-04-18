@@ -1,10 +1,18 @@
 @import "../../App.scss";
 
+.hero-blur {
+  width: 22rem;
+  height: 30rem;
+  left: 0;
+  top: 0;
+}
+
 .Hero {
   width: 100vw;
   height: 100vh;
-  padding: 10px 40px 10px 40px;
+  padding: 20px 40px 10px 40px;
   position: relative;
+  z-index: 1;
   @include mobile {
     padding: 10px 20px 10px 20px;
     height: 150vh;
@@ -31,6 +39,11 @@
 
   .menu {
     display: none;
+    background: var(--appColor);
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0 8px 0;
+    border-radius: 0.2em;
 
     @include mobile {
       display: flex;
@@ -68,6 +81,29 @@
     }
   }
 
+  .pages2 {
+    display: none;
+  }
+
+  .pages-mobile {
+    display: none;
+    a {
+      text-decoration: none;
+    }
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: 2em;
+      top: 5em;
+      background: var(--appColor);
+      width: 40%;
+      height: 25vh;
+      padding: 10px;
+      z-index: 10;
+    }
+  }
+
   .join {
     z-index: 1;
     button {
@@ -76,6 +112,7 @@
       font-weight: bold;
       border-radius: 0;
       border: none;
+      outline: none;
     }
     @include mobile {
       display: none;
@@ -205,6 +242,7 @@
       width: 100%;
       border-radius: 0;
       border: none;
+      outline: none;
     }
     button:nth-child(1) {
       background: var(--orange);
@@ -236,6 +274,7 @@
       width: 70%;
       bottom: 0;
       left: 0.5em;
+      transition: none;
     }
     img {
       width: 100%;
@@ -269,13 +308,18 @@
     flex-direction: column;
     justify-content: space-around;
     padding: 10px;
+    border-radius: 0.2em;
     @include mobile {
       top: 0;
       right: 0;
       height: 6em;
+      font-size: 15px;
     }
     img {
       width: 30%;
+      @include mobile {
+        width: 25%;
+      }
     }
   }
   .calories {
@@ -286,17 +330,22 @@
     width: 40%;
     padding: 15px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    border-radius: 0.2em;
     @include mobile {
       width: 45%;
-      height: 12vh;
+      height: 10vh;
       font-size: 14px;
       padding: 8px;
       left: 0;
-      top: 25em;
+      top: 24em;
     }
     img {
       width: 25%;
+      @include mobile {
+        height: 7vh;
+      }
     }
     div {
       display: flex;

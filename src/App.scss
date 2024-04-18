@@ -32,6 +32,17 @@ body {
   font-family: "Kumbh Sans", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.blur {
+  background: rgba(253, 120, 43, 0.69);
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(150px);
+}
+
 @mixin mobile {
   @media (max-width: 738px) {
     @content;

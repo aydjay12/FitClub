@@ -5,11 +5,42 @@
   padding: 20px 40px 0px 40px;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 140vh;
+  position: relative;
   @include mobile {
-    height: 150vh;
+    height: 170vh;
     justify-content: space-between;
     padding: 10px 20px 10px 20px;
+  }
+  .arrows {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    left: 0;
+    position: absolute;
+    top: 26em;
+    gap: 1em;
+    @include mobile {
+      width: 100%;
+      top: 56em;
+    }
+    button {
+      width: 5%;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      background: var(--orange);
+      border: none;
+      outline: none;
+      @include mobile {
+        width: 20%;
+      }
+    }
+    img {
+      width: 80%;
+    }
   }
   h3 {
     font-size: 16px;
@@ -32,18 +63,27 @@
       }
     }
     .slider2 {
-      display: none;
+      display: flex;
+      @include mobile {
+        flex-direction: column;
+      }
     }
     .slider3 {
-      display: none;
+      display: flex;
+      @include mobile {
+        flex-direction: column;
+      }
     }
     .sliderLeft {
       width: 55%;
+      height: 45vh;
       display: flex;
+      margin-bottom: 3em;
       flex-direction: column;
       justify-content: space-between;
       @include mobile {
         width: 100%;
+        height: unset;
       }
       h1 {
         width: 60%;
@@ -63,7 +103,7 @@
       p {
         font-size: 1.1em;
         letter-spacing: 0.08em;
-        width: 90%;
+        width: 100%;
         line-height: 2em;
         @include mobile {
           width: 100%;
@@ -82,32 +122,11 @@
         }
       }
     }
-    .arrows {
-      display: flex;
-      width: 7%;
-      align-items: center;
-      align-self: end;
-      @include mobile {
-        width: 30%;
-        align-self: center;
-        position: absolute;
-        top: 50em;
-      }
-      button {
-        width: 100%;
-        background: transparent;
-        padding: 10px;
-        border: none;
-      }
-      img {
-        width: 100%;
-      }
-    }
     .sliderRight {
-      margin-left: 7em;
+      margin-left: 12em;
       width: 20%;
       position: relative;
-      height: 48vh;
+      height: 46vh;
       @include mobile {
         width: 100%;
         height: 43vh;
@@ -215,6 +234,9 @@
         background: var(--caloryCard);
         border: none;
         outline: none;
+        @include mobile {
+          padding-left: 0.8em;
+        }
       }
       input::placeholder {
         color: white;
