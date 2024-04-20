@@ -30,14 +30,17 @@ const Hero = () => {
           <div className="menu" onClick={toggleMobilePages}>
             <img src={menu} alt="" />
           </div>
-          <div
+          <motion.div
+            initial={{ left: "100px", opacity: "0" }}
+            whileInView={{ left: "150px", opacity: "1", duration: "1" }}
+            transition={{ duration: "1", type: "tween" }}
             className={`pages pages2 ${showMobilePages ? "pages-mobile" : ""}`}>
             {items.map((item) => (
               <motion.a href={`#${item}`} key={item}>
                 {item}
               </motion.a>
             ))}
-          </div>
+          </motion.div>
           <div className="pages">
             {items.map((item) => (
               <motion.a href={`#${item}`} key={item}>

@@ -79,18 +79,33 @@ const Testimonials = () => {
               </h4>
             </div>
             <div className="sliderRight">
-              {/* Add motion.div for animation */}
               <motion.div
+                className="box-1"
                 initial={{ left: "-7rem" }}
                 whileInView={{ left: "-1rem" }}
                 transition={{ duration: 0.5 }}></motion.div>
               <motion.div
+                className="box-2"
                 initial={{ left: "5rem" }}
                 whileInView={{ left: "1rem" }}
                 transition={{ duration: 0.5 }}></motion.div>
-              {activeSlide === 1 && <img src={tImage1} alt="Slide Image" />}
-              {activeSlide === 2 && <img src={tImage2} alt="Slide Image" />}
-              {activeSlide === 3 && <img src={tImage3} alt="Slide Image" />}
+              {activeSlide === 1 && (
+                <motion.img src={tImage1} alt="Slide Image" />
+              )}
+              {activeSlide === 2 && (
+                <motion.img src={tImage2} alt="Slide Image" />
+              )}
+              {activeSlide === 3 && (
+                <motion.img src={tImage3} alt="Slide Image" />
+              )}
+              <div className="arrows arrow-m">
+                <button onClick={handlePrevSlide}>
+                  <img src={leftArrow} alt="" />
+                </button>
+                <button onClick={handleNextSlide}>
+                  <img src={rightArrow} alt="" />
+                </button>
+              </div>
             </div>
           </div>
         </div>

@@ -5,7 +5,8 @@
   padding: 20px 40px 0px 40px;
   @include mobile {
     padding: 10px 20px 10px 20px;
-    height: 175vh;
+    height: unset;
+    margin-top: 28em;
   }
 }
 

@@ -14,10 +14,10 @@ const Why_Us = () => {
     <>
       <section className="Why_Us">
         <div className="left">
-          <img src={image1} alt="" />
-          <img src={image2} alt="" />
-          <img src={image3} alt="" />
-          <img src={image4} alt="" />
+          <img className="img1" src={image1} alt="" />
+          <img className="img2" src={image2} alt="" />
+          <img className="img3" src={image3} alt="" />
+          <img className="img4" src={image4} alt="" />
         </div>
         <div className="right">
           <h4>SOME REASONS</h4>
